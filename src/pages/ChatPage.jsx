@@ -4,6 +4,8 @@ import { Message } from "../components/Message";
 import { MessageForm } from "../components/MessageForm";
 import { AppContext } from "../contexts/AppContext";
 import { Navigate } from "react-router-dom";
+import "../styles/ChatPage.css";
+import "../styles/Button.css";
 
 export function ChatPage() {
   const [messages, setMessages] = useState([]);
@@ -70,7 +72,11 @@ export function ChatPage() {
   return (
     <div>
       Chat page
-      <button type="button" onClick={handleSignOut}>
+      <button
+        className="button button-danger"
+        type="button"
+        onClick={handleSignOut}
+      >
         Sign out
       </button>
       <div className="message-list">{messageComponents}</div>

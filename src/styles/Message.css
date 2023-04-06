@@ -1,0 +1,16 @@
+.message-author-me {
+  text-align: right;
+}
+
+.message-wrap {
+  background-color: lightyellow;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  border: 1px solid black;
+  border-radius: 1.5vw;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}

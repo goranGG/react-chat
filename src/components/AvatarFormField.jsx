@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FormField } from "./FormField";
 import { avatarImages } from "../library/avatar";
+import "../styles/AvatarFormField.css";
 
 export function AvatarFormField(props) {
   const [index, setIndex] = useState(0);
@@ -25,13 +26,29 @@ export function AvatarFormField(props) {
 
   return (
     <FormField>
-      <button type="button" onClick={handlePreviousClick}>
-        Previous
-      </button>
-      <img src={avatarImages[index]} alt={index} width={100} />
-      <button type="button" onClick={handleNextClick}>
-        Next
-      </button>
+      <div className="avatars">
+        <div>
+          <img
+            className="img-avatar-select"
+            src={avatarImages[index]}
+            alt={index}
+          />
+        </div>
+        <button
+          className="button-avatar-select"
+          type="button"
+          onClick={handlePreviousClick}
+        >
+          Previous
+        </button>
+        <button
+          className="button-avatar-select"
+          type="button"
+          onClick={handleNextClick}
+        >
+          Next
+        </button>
+      </div>
     </FormField>
   );
 }

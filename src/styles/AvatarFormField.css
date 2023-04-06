@@ -1,0 +1,15 @@
+.avatars {
+  text-align: center;
+}
+
+.button-avatar-select {
+  background-color: black;
+  border-radius: none;
+  color: white;
+  height: 40px;
+  margin: 0 0.3vw;
+}
+
+.img-avatar-select {
+  width: 150px;
+}

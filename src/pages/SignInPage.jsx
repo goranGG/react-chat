@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { SignInForm } from "../components/SignInForm";
 import { AppContext } from "../contexts/AppContext";
+import "../styles/SignIn.css";
 
 export function SignInPage() {
   const context = useContext(AppContext);
@@ -19,7 +20,11 @@ export function SignInPage() {
     <div className="sign-in-page">
       <div className="card">
         <SignInForm onSubmit={handleSubmit} />
-        <Link to="/faq">Read FAQ</Link>
+        <div className="nav-links">
+          <Link to="/faq">Read FAQ</Link>
+          <br />
+          <span>Created by Goran Gagro</span>
+        </div>
       </div>
     </div>
   );

@@ -10,10 +10,6 @@ export function AppProvider(props) {
   const [config, setConfig] = useState(null);
   const [error, setError] = useState(null);
 
-  // function handleSignOut() {
-  //   setUsername("");
-  // }
-
   useEffect(() => {
     fetch("/assets/config.json")
       .then((response) => {

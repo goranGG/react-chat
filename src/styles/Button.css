@@ -1,7 +1,13 @@
 .button {
-    width: 100%;
-    background-color: black;
-    border-radius: none;
-    color: white;
-    height: 40px;
+  width: 100%;
+  background-color: black;
+  border-radius: none;
+  color: white;
+  height: 40px;
+}
+
+.button-danger {
+  position: sticky;
+  top: 0;
+  background-color: crimson;
 }
