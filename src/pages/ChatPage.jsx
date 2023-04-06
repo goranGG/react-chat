@@ -25,8 +25,6 @@ export function ChatPage() {
   }
 
   const messageComponents = messages.map((message) => {
-    // console.log("MAPPING");
-    // console.log(message);
     return (
       <Message
         key={message.id}
@@ -51,7 +49,7 @@ export function ChatPage() {
         setChatRoom(room);
       }
     });
-    console.log(drone);
+    // console.log(drone);
   }, []);
 
   useEffect(() => {

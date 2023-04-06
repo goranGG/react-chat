@@ -1,11 +1,7 @@
 import { avatarImages } from "../library/avatar";
 
 export function Message(props) {
-  // console.log("MESSAGE::::");
-  // console.log(props);
   const time = new Date(props.id);
-  // console.log("TIME");
-  // console.log(time);
 
   return (
     <div className="message">
