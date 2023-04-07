@@ -15,11 +15,13 @@ export function ChatPage() {
   const [ready, setReady] = useState(false);
 
   function handleSubmit(message) {
-    // send message
-    client.publish({
-      room: "AlgebraKanal",
-      message: message,
-    });
+    if (message.text !== "") {
+      // send message
+      client.publish({
+        room: "AlgebraKanal",
+        message: message,
+      });
+    }
   }
 
   function handleSignOut() {
