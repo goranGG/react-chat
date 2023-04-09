@@ -16,18 +16,28 @@ export function Message(props) {
           : "message-author-others")
       }
     >
-      <div className="message-wrap">
-        <div className="message-author">
-          {props.author} <br /> Sent {time.getHours()}:{time.getMinutes()}{" "}
+      <div
+        className={
+          "message-wrap " +
+          (props.author === context.username
+            ? "message-wrap-me"
+            : "message-wrap-others")
+        }
+      >
+        <div className="message-grid-1">{props.text}</div>
+        <div className="message-grid-2">
+          <img
+            className="message-avatar"
+            src={avatarImages[props.avatarIndex]}
+            alt={props.author}
+            width={100}
+            height={100}
+          />
+          <span>{props.author}</span>
         </div>
-        <img
-          className="message-avatar"
-          src={avatarImages[props.avatarIndex]}
-          alt={props.author}
-          width={100}
-          height={100}
-        />
-        <div className="message-text">{props.text}</div>
+        <div className="message-grid-3">
+          Sent {time.getHours()}:{time.getMinutes()}{" "}
+        </div>
         <div className="message-id"></div>
       </div>
     </div>

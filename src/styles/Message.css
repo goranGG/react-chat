@@ -3,12 +3,39 @@
 }
 
 .message-wrap {
-  background-color: lightyellow;
-  display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
+  max-width: 50%;
   border: 1px solid black;
   border-radius: 1.5vw;
+  padding: 15px;
+  display: inline-grid;
+}
+
+.message-wrap-me {
+  background-color: lightyellow;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 4fr 0.5fr;
+  grid-template-areas:
+    "one two"
+    "three two";
+}
+.message-wrap-others {
+  background-color: lightcyan;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 0.5fr 4fr;
+  grid-template-areas:
+    "two one"
+    "two three";
+}
+
+.message-grid-1 {
+  grid-area: one;
+}
+.message-grid-2 {
+  text-align: center;
+  grid-area: two;
+}
+.message-grid-3 {
+  grid-area: three;
 }
 
 .margin-top-10 {
