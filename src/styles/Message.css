@@ -13,7 +13,7 @@
 .message-wrap-me {
   background-color: lightyellow;
   grid-template-rows: 1fr auto;
-  grid-template-columns: 4fr 0.5fr;
+  grid-template-columns: 1fr 120px;
   grid-template-areas:
     "one two"
     "three two";
@@ -21,7 +21,7 @@
 .message-wrap-others {
   background-color: lightcyan;
   grid-template-rows: 1fr auto;
-  grid-template-columns: 0.5fr 4fr;
+  grid-template-columns: 120px 1fr;
   grid-template-areas:
     "two one"
     "two three";
@@ -29,6 +29,7 @@
 
 .message-grid-1 {
   grid-area: one;
+  text-align: justify;
 }
 .message-grid-2 {
   text-align: center;
@@ -40,4 +41,30 @@
 
 .margin-top-10 {
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .message-wrap {
+    max-width: 70%;
+  }
+
+  .message-wrap-me {
+    background-color: lightyellow;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "two"
+      "one"
+      "three";
+  }
+
+  .message-wrap-others {
+    background-color: lightcyan;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "two"
+      "one"
+      "three";
+  }
 }

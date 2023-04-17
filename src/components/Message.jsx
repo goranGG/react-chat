@@ -33,10 +33,12 @@ export function Message(props) {
             width={100}
             height={100}
           />
-          <span>{props.author}</span>
+          <div>{props.author}</div>
         </div>
         <div className="message-grid-3">
+          <hr />
           Sent {time.getHours()}:{time.getMinutes()}{" "}
+          <hr />
         </div>
         <div className="message-id"></div>
       </div>
